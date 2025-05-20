@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Code Systems - Padaria Nova Esperança</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="./logo-newcode.png" alt="New Code Systems Logo" class="logo">
+        
+        <div class="menu-item">
+            <div class="icon">
+                <img src="./inicio.svg" alt="Ícone de Início" class="home-icon">
+            </div>
+            <span>Início</span>
+            <button onclick="toggleSubMenu()" class="toggle-btn">▾</button>
+        </div>
+
+        <div id="sub-menu" class="sub-menu">
+            <a href="#">Vendas</a>
+            <a href="#">Despesas</a>
+            <a href="#">Estoque</a>
+            <a href="#">Relatórios</a>
+        </div>
+        
+        <a href="#">
+            <div class="icon">
+                <img src="./perfil.svg" alt="Ícone de Perfil" class="profile-icon">
+            </div>
+            Perfil
+        </a>
+
+        <a href="#">
+            <div class="icon">
+                <img src="./whatsapp.png" alt="Ícone do WhatsApp" class="ai-icon">
+            </div>
+            IA
+        </a>
+
+        <a href="#">
+            <div class="icon">
+                <img src="./ajuda.svg" alt="Ícone de Ajuda" class="help-icon">
+            </div>
+            Ajuda
+        </a>
+    </div>
+
+    <div class="main-content">
+        <header class="header-top">
+            <h1>New Code Systems</h1>
+            <h2>Bem Vindo, Seu Jorge!</h2>
+            <p>Selecione a ação desejada:</p>
+        </header>
+        
+        <div class="buttons-container">
+            <button>Vendas</button>
+            <button>Despesas</button>
+            <button>Estoque</button>
+            <button>Relatórios Mensais</button>
+            <button>Assistente IA via Whatsapp</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>New Code Systems© - A solução para o seu negócio | Contato: (42) 99944-3005</p>
+    </footer>
+
+    <script>
+        function toggleSubMenu() {
+            const subMenu = document.getElementById('sub-menu');
+            subMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
