@@ -124,7 +124,7 @@ label {
 /* Estilizando a div do botão */
 .submit-container {
     width: 100%;
-    text-align: center;
+    text-align: left;
     margin-top: 15px;
 }
 
