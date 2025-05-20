@@ -125,7 +125,7 @@ label {
 /* Ajustando tamanho dos campos */
 input, select {
     width: 100%;
-    height: 30px; /* Ajuste conforme necessário */
+    height: 35px; /* Ajuste conforme necessário */
     font-size: 1.1em;
     padding: 5px;
     border: 1px solid #ccc;
