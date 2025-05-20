@@ -53,9 +53,14 @@
             <h2>Padaria Nova Esperança</h2>
         </header>
 
-        <form id="formVenda">
+    <form id="formVenda">
         <label for="produto">Produto:</label>
-        <input type="text" id="produto" name="produto" required>
+        <select id="produto" name="produto" required>
+            <option value="pao">Pão</option>
+            <option value="bolo">Bolo</option>
+            <option value="cafe">Café</option>
+            <option value="salgado">Salgado</option>
+        </select>
 
         <label for="quantidade">Quantidade:</label>
         <input type="number" id="quantidade" name="quantidade" required>
@@ -63,7 +68,7 @@
         <label for="valor">Valor Total:</label>
         <input type="number" id="valor" name="valor" required>
 
-        <button type="submit">Lançar Venda</button>
+        <button type="submit" class="submit-btn">Lançar Venda</button>
     </form>
 
     <footer>
