@@ -1,0 +1,127 @@
+/* ======= Global Styles ======= */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+/* ======= Sidebar ======= */
+.sidebar {
+    width: 250px;
+    background-color: #1d2671;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 20px;
+}
+
+.sidebar a, .menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    margin-right: 10px;
+}
+
+.profile-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.ai-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.help-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.home-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Removendo o fundo branco da seta */
+.toggle-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.sub-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #1d2671;
+    margin-left: 20px;
+}
+
+.sub-menu.active {
+    display: flex;
+}
+
+/* ======= Main Content ======= */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+
+header {
+    text-align: left;
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+header h1 {
+    color: #1d2671;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+}
+
+header p {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* ======= Footer ======= */
+footer {
+    width: 100%;
+    background-color: #1d2671;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
