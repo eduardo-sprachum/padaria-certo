@@ -122,6 +122,17 @@ label {
     margin-top: 20px;
 }
 
+/* Ajustando tamanho dos campos */
+input, select {
+    width: 100%;
+    height: 40px; /* Ajuste conforme necessário */
+    font-size: 1.1em;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
 /* Estilizando a div do botão */
 .submit-container {
     width: 100%;
