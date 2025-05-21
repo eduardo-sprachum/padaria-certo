@@ -30,6 +30,14 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
             <option value="rosca-polvilho">Rosca de Polvilho</option>
             <option value="torta-doce">Torta Doce</option>
             <option value="torta-salgada">Torta Salgada</option>
+            <option value="cafe">Café preto</option>
+            <option value="cafe-leite">Café com leite</option>
+            <option value="capuccino">Capuccino</option>
+            <option value="cha">Chá</option>
+            <option value="chocolate-quente">Chocolate quente</option>
+            <option value="suco">suco</option>
+            <option value="refrigerante">Refrigerante</option>
+            
         </select>
 
         <label for="${idQuantidade}">Quantidade:</label>
@@ -59,7 +67,14 @@ const precosProdutos = {
     "ROSQUINHA": 4.00,
     "ROSCA POLVILHO": 5.50,
     "TORTA DOCE": 20.00,
-    "TORTA SALGADA": 18.00
+    "TORTA SALGADA": 18.00,
+    "CAFE": 5.00,
+    "CAFE COM LEITE": 7.00,
+    "CAPUCCINO": 10.00,
+    "CHA": 4.00,
+    "CHOCOLATE-QUENTE": 8.00,
+    "SUCO": 10.00,
+    "REFRIGERANTE": 10.00
 };
 
 document.getElementById("adicionarProduto").addEventListener("click", function () {
