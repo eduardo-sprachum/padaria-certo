@@ -116,3 +116,47 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
         lista.scrollTo({ top: lista.scrollHeight, behavior: "smooth" });
     }, 100); // Pequeno delay para garantir atualização da DOM
 });
+
+document.getElementById("formVenda").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const listaProdutos = document.querySelectorAll("#produtosLista p");
+    const produtos = [];
+
+    listaProdutos.forEach(item => {
+        const texto = item.textContent;
+        const match = texto.match(/^(\d+)x (.+?) - R\$ ([\d,]+)$/);
+
+        if (match) {
+            produtos.push({
+                quantidade: parseInt(match[1]),
+                produto: match[2]
+            });
+        }
+    });
+
+    const valorTotal = document.getElementById("valorTotal").value;
+
+    fetch("salvar_venda.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ produtos, valorTotal })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "ok") {
+            alert("Venda registrada com sucesso!");
+            document.getElementById("formVenda").reset();
+            document.getElementById("produtosLista").innerHTML = "";
+            document.getElementById("valorTotal").value = "";
+        } else {
+            alert("Erro ao salvar: " + data.mensagem);
+        }
+    })
+    .catch(err => {
+        console.error("Erro ao enviar dados", err);
+        alert("Erro ao enviar dados.");
+    });
+});
