@@ -159,5 +159,5 @@ footer {
     color: white;
     text-align: center;
     padding: 15px 0;
-    /* REMOVIDO: position: fixed */
+    position: fixed;
 }
