@@ -175,13 +175,6 @@ input, select {
     background-color: #218838;
 }
 
-#produtosLista {
-    max-height: 300px;
-    overflow-y: auto;
-    display: block;
-    padding: 10px;
-}
-
 /* ======= Footer ======= */
 footer {
     width: 100%;
