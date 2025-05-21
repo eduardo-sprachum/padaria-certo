@@ -167,7 +167,7 @@ select {
 }
 
 .submit-container {
-    position: sticky;  /* Ao invés de fixed */
+    position: fixed;  /* Ao invés de fixed */
     bottom: 0;
     background: white;
     padding: 10px 0;
