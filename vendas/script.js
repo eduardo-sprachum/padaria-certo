@@ -41,25 +41,25 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
 
 // Lista de preços dos produtos
 const precosProdutos = {
-    "BISCOITO": 5.00,
-    "BOLO CENOURA": 12.00,
-    "BOLO CHOCOLATE": 15.00,
-    "BOLO FUBÁ": 10.00,
-    "BOLO LARANJA": 13.00,
-    "BOLO MILHO": 11.00,
-    "COXINHA": 7.00,
-    "CROISSANT": 9.00,
-    "CUCA": 14.00,
-    "DONUTS": 8.00,
-    "EMPADINHA": 6.00,
-    "ESFIHA": 10.00,
-    "PÃO FORMA": 8.00,
-    "PÃO FRANCÊS": 3.00,
-    "PASTEL": 6.00,
-    "ROSQUINHA": 4.00,
-    "ROSCA POLVILHO": 5.50,
-    "TORTA DOCE": 20.00,
-    "TORTA SALGADA": 18.00
+    "biscoito": 5.00,
+    "bolo-cenoura": 12.00,
+    "bolo-chocolate": 15.00,
+    "bolo-fuba": 10.00,
+    "bolo-laranja": 13.00,
+    "bolo-milho": 11.00,
+    "coxinha": 7.00,
+    "croissant": 9.00,
+    "cuca": 14.00,
+    "donuts": 8.00,
+    "empadinha": 6.00,
+    "esfiha": 10.00,
+    "pao-forma": 8.00,
+    "pao-frances": 3.00,
+    "pastel": 6.00,
+    "rosquinha": 4.00,
+    "rosca-polvilho": 5.50,
+    "torta-doce": 20.00,
+    "torta-salgada": 18.00
 };
 
 document.getElementById("adicionarProduto").addEventListener("click", function () {
