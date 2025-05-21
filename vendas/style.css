@@ -164,3 +164,32 @@ footer {
     position: fixed;
     bottom: 0;
 }
+
+.header-sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.header-sub h2 {
+    margin: 0;
+    font-size: 1.6em;
+}
+
+.header-btn {
+    font-size: 1em;
+    padding: 8px 16px;
+    margin-left: 20px;
+    background-color: #28a745;
+    white-space: nowrap;
+}
+
+label {
+    display: block;
+    font-size: 1em; /* Reduzido */
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-top: 16px;
+}
