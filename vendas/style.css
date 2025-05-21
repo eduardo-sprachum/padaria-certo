@@ -9,8 +9,6 @@ body, html {
 
 ::-webkit-scrollbar {
     width: 10px;
-    position: relative;
-    margin-right: 0%;
 }
 
 ::-webkit-scrollbar-track {
@@ -35,8 +33,8 @@ body, html {
     flex-direction: column;
     gap: 5px;
     padding-top: 20px;
-    height: 100vh; /* NOVO */
-    position: fixed; /* Mantém fixo na lateral */
+    height: 100vh;
+    position: fixed;
     top: 0;
     left: 0;
 }
@@ -54,38 +52,12 @@ body, html {
     position: relative;
 }
 
-.icon {
-    width: 24px;
-    height: 24px;
-    background-color: transparent;
-    margin-right: 10px;
-}
-
-.profile-icon {
+.icon, .profile-icon, .ai-icon, .help-icon, .home-icon {
     width: 24px;
     height: 24px;
     margin-right: 10px;
 }
 
-.ai-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.help-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.home-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-/* Removendo o fundo branco da seta */
 .toggle-btn {
     background-color: transparent;
     border: none;
@@ -117,7 +89,6 @@ body, html {
 
 header {
     text-align: left;
-    margin-top: 0;
     margin-left: 10px;
 }
 
@@ -132,12 +103,6 @@ header h2 {
     font-size: 1.8em;
 }
 
-header p {
-    color: #7f8c8d;
-    margin-bottom: 20px;
-}
-
-/* Estilizando os labels */
 label {
     display: block;
     font-size: 1.2em;
@@ -146,12 +111,10 @@ label {
     margin-top: 20px;
 }
 
-/* Ajustando tamanho dos campos */
 input,
 select {
     width: 100%;
     height: 35px;
-    /* Ajuste conforme necessário */
     font-size: 1.1em;
     padding: 5px;
     border: 1px solid #ccc;
@@ -167,11 +130,11 @@ select {
 }
 
 .submit-container {
-    position: sticky;  /* Ao invés de fixed */
-    bottom: 0;
-    background: white;
-    padding: 10px 0;
     margin-top: 20px;
+    background: #28a745;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-align: center;
 }
 
 .submit-btn {
@@ -196,7 +159,5 @@ footer {
     color: white;
     text-align: center;
     padding: 15px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    /* REMOVIDO: position: fixed */
 }
