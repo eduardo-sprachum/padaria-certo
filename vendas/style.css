@@ -158,6 +158,9 @@ select {
     border-radius: 5px;
 }
 
+#produtosLista {
+    padding: 10px;
+}
 
 /* Estilizando a div do botão */
 .submit-container {
@@ -165,10 +168,6 @@ select {
     text-align: left;
     margin-top: 30px;
     position: sticky;
-}
-
-#produtosLista {
-    padding: 10px;
 }
 
 /* Estilizando o botão */
