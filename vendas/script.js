@@ -91,3 +91,10 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
         alert("Selecione um produto válido!");
     }
 });
+
+document.getElementById("adicionarProduto").addEventListener("click", function () {
+    // Código que adiciona o produto à lista...
+    
+    // Depois que o produto for adicionado, rolar para o final
+    document.getElementById("produtosLista").scrollIntoView({ behavior: "smooth", block: "end" });
+});
