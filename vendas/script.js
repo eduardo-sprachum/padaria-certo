@@ -69,7 +69,7 @@ const precosProdutos = {
     "TORTA DOCE": 20.00,
     "TORTA SALGADA": 18.00,
     "CAFE": 5.00,
-    "CAFE COM LEITE": 7.00,
+    "CAFE-LEITE": 7.00,
     "CAPUCCINO": 10.00,
     "CHA": 4.00,
     "CHOCOLATE-QUENTE": 8.00,
