@@ -164,7 +164,6 @@ select {
     width: 100%;
     text-align: left;
     margin-top: 30px;
-    position: fixed;
 }
 
 #produtosLista {
@@ -182,7 +181,6 @@ select {
     border: none;
     cursor: pointer;
     display: block;
-    position: fixed;
 }
 
 .submit-btn:hover {
