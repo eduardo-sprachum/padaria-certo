@@ -38,3 +38,51 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
 
     container.appendChild(novoProduto);
 });
+
+const precosProdutos = {
+    "biscoito": 5.00,
+    "bolo-cenoura": 12.00,
+    "bolo-chocolate": 15.00,
+    "bolo-fuba": 10.00,
+    "bolo-laranja": 13.00,
+    "bolo-milho": 11.00,
+    "coxinha": 7.00,
+    "croissant": 9.00,
+    "cuca": 14.00,
+    "donuts": 8.00,
+    "empadinha": 6.00,
+    "esfiha": 10.00,
+    "pao-forma": 8.00,
+    "pao-frances": 3.00,
+    "pastel": 6.00,
+    "rosquinha": 4.00,
+    "rosca-polvilho": 5.50,
+    "torta-doce": 20.00,
+    "torta-salgada": 18.00
+};
+
+document.getElementById("adicionarProduto").addEventListener("click", function () {
+    let produtoSelecionado = prompt("Escolha um produto pelo código:\n" + 
+        Object.keys(precosProdutos).join("\n"));
+
+    if (precosProdutos.hasOwnProperty(produtoSelecionado)) {
+        let quantidade = parseInt(prompt("Informe a quantidade:"));
+        if (!isNaN(quantidade) && quantidade > 0) {
+            let precoUnitario = precosProdutos[produtoSelecionado];
+            let precoTotal = precoUnitario * quantidade;
+
+            let novoProduto = document.createElement("p");
+            novoProduto.textContent = `${quantidade}x ${produtoSelecionado} - R$ ${precoTotal.toFixed(2)}`;
+
+            document.getElementById("produtosLista").appendChild(novoProduto);
+
+            // Atualizar o valor total
+            let valorAtual = parseFloat(document.getElementById("valorTotal").value) || 0;
+            document.getElementById("valorTotal").value = (valorAtual + precoTotal).toFixed(2);
+        } else {
+            alert("Quantidade inválida!");
+        }
+    } else {
+        alert("Produto não encontrado!");
+    }
+});
