@@ -6,6 +6,8 @@ body, html {
     height: 100vh;
     display: flex;
     overflow: auto;
+    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 /* ======= Sidebar ======= */
