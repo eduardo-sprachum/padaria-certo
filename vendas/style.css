@@ -1,5 +1,6 @@
 /* ======= Global Styles ======= */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -158,6 +159,12 @@ select {
     width: 100%;
     text-align: left;
     margin-top: 30px;
+}
+
+#produtosLista {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
 }
 
 /* Estilizando o botão */
