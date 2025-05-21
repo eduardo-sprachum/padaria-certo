@@ -48,14 +48,32 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
 });
 
 const precosProdutos = {
-    "Pão Francês": 0.5,
-    "Pão de Queijo": 1.0,
-    "Croissant": 2.5,
-    "Bolo de Cenoura": 3.0,
-    "Café": 2.0,
-    "Leite": 2.5,
-    "Refrigerante": 4.0,
-    "Suco Natural": 5.0
+    "BISCOITO": 5.00,
+    "BOLO CENOURA": 12.00,
+    "BOLO CHOCOLATE": 15.00,
+    "BOLO FUBÁ": 10.00,
+    "BOLO LARANJA": 13.00,
+    "BOLO MILHO": 11.00,
+    "COXINHA": 7.00,
+    "CROISSANT": 9.00,
+    "CUCA": 14.00,
+    "DONUTS": 8.00,
+    "EMPADINHA": 6.00,
+    "ESFIHA": 10.00,
+    "PÃO FORMA": 8.00,
+    "PÃO FRANCÊS": 3.00,
+    "PASTEL": 6.00,
+    "ROSQUINHA": 4.00,
+    "ROSCA POLVILHO": 5.50,
+    "TORTA DOCE": 20.00,
+    "TORTA SALGADA": 18.00,
+    "CAFE": 5.00,
+    "CAFE-LEITE": 7.00,
+    "CAPUCCINO": 10.00,
+    "CHA": 4.00,
+    "CHOCOLATE-QUENTE": 8.00,
+    "SUCO": 10.00,
+    "REFRIGERANTE": 10.00
 };
 
 let listaProdutos = [];
