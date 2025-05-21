@@ -41,25 +41,25 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
 
 // Lista de preços dos produtos
 const precosProdutos = {
-    "biscoito": 5.00,
-    "bolo-cenoura": 12.00,
-    "bolo-chocolate": 15.00,
-    "bolo-fuba": 10.00,
-    "bolo-laranja": 13.00,
-    "bolo-milho": 11.00,
-    "coxinha": 7.00,
-    "croissant": 9.00,
-    "cuca": 14.00,
-    "donuts": 8.00,
-    "empadinha": 6.00,
-    "esfiha": 10.00,
-    "pao-forma": 8.00,
-    "pao-frances": 3.00,
-    "pastel": 6.00,
-    "rosquinha": 4.00,
-    "rosca-polvilho": 5.50,
-    "torta-doce": 20.00,
-    "torta-salgada": 18.00
+    "BISCOITO": 5.00,
+    "BOLO CENOURA": 12.00,
+    "BOLO CHOCOLATE": 15.00,
+    "BOLO FUBÁ": 10.00,
+    "BOLO LARANJA": 13.00,
+    "BOLO MILHO": 11.00,
+    "COXINHA": 7.00,
+    "CROISSANT": 9.00,
+    "CUCA": 14.00,
+    "DONUTS": 8.00,
+    "EMPADINHA": 6.00,
+    "ESFIHA": 10.00,
+    "PÃO FORMA": 8.00,
+    "PÃO FRANCÊS": 3.00,
+    "PASTEL": 6.00,
+    "ROSQUINHA": 4.00,
+    "ROSCA POLVILHO": 5.50,
+    "TORTA DOCE": 20.00,
+    "TORTA SALGADA": 18.00
 };
 
 document.getElementById("adicionarProduto").addEventListener("click", function () {
@@ -71,16 +71,17 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
             let precoUnitario = precosProdutos[produtoSelecionado];
             let precoTotal = precoUnitario * quantidade;
 
+            // Criando um parágrafo único para listar os produtos
             let novoProduto = document.createElement("p");
             novoProduto.textContent = `${quantidade}x ${produtoSelecionado} - R$ ${precoTotal.toFixed(2)}`;
 
             document.getElementById("produtosLista").appendChild(novoProduto);
 
-            // Atualizar o valor total
+            // Atualizar o valor total sem criar novos labels
             let valorAtual = parseFloat(document.getElementById("valorTotal").value) || 0;
             document.getElementById("valorTotal").value = (valorAtual + precoTotal).toFixed(2);
 
-            // Limpar seleção para adicionar novo produto
+            // Resetando campos para inserir outro produto sem duplicação
             document.getElementById("produto").selectedIndex = 0;
             document.getElementById("quantidade").value = "";
         } else {
