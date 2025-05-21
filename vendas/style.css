@@ -11,22 +11,21 @@ body, html {
 }
 
 ::-webkit-scrollbar {
-    width: 10px; /* Define a largura da barra de rolagem */
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Cor de fundo */
+    background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888; /* Cor da barra */
-    border-radius: 5px; /* Borda arredondada */
+    background: #888;
+    border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Cor ao passar o mouse */
+    background: #555;
 }
-
 
 /* ======= Sidebar ======= */
 .sidebar {
@@ -174,6 +173,11 @@ input, select {
     background-color: #218838;
 }
 
+#produtosLista {
+    max-height: 300px; /* Altura máxima antes de aparecer a barra de rolagem */
+    overflow-y: auto; /* Permite rolagem vertical quando necessário */
+    padding: 10px; /* Espaço interno para melhorar a visualização */
+}
 
 /* ======= Footer ======= */
 footer {
