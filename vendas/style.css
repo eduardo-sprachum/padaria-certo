@@ -3,11 +3,10 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    height: 100vh;
+    height: 100%;
+    position: fixed;
     display: flex;
-    overflow: auto;
-    overflow-y: auto;
-    overflow-y: scroll;
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -174,9 +173,10 @@ input, select {
 }
 
 #produtosLista {
-    max-height: 300px; /* Altura máxima antes de aparecer a barra de rolagem */
-    overflow-y: auto; /* Permite rolagem vertical quando necessário */
-    padding: 10px; /* Espaço interno para melhorar a visualização */
+    max-height: 300px; /* Ajuste para um valor maior se necessário */
+    overflow-y: auto; /* Permite rolagem */
+    display: block; /* Garante que não seja inline */
+    padding: 10px;
 }
 
 /* ======= Footer ======= */
