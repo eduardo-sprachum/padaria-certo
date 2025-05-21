@@ -39,6 +39,7 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
     container.appendChild(novoProduto);
 });
 
+// Lista de preços dos produtos
 const precosProdutos = {
     "biscoito": 5.00,
     "bolo-cenoura": 12.00,
@@ -62,11 +63,10 @@ const precosProdutos = {
 };
 
 document.getElementById("adicionarProduto").addEventListener("click", function () {
-    let produtoSelecionado = prompt("Escolha um produto pelo código:\n" + 
-        Object.keys(precosProdutos).join("\n"));
+    let produtoSelecionado = document.getElementById("produto").value;
+    let quantidade = parseInt(document.getElementById("quantidade").value);
 
-    if (precosProdutos.hasOwnProperty(produtoSelecionado)) {
-        let quantidade = parseInt(prompt("Informe a quantidade:"));
+    if (produtoSelecionado && precosProdutos.hasOwnProperty(produtoSelecionado)) {
         if (!isNaN(quantidade) && quantidade > 0) {
             let precoUnitario = precosProdutos[produtoSelecionado];
             let precoTotal = precoUnitario * quantidade;
@@ -79,10 +79,14 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
             // Atualizar o valor total
             let valorAtual = parseFloat(document.getElementById("valorTotal").value) || 0;
             document.getElementById("valorTotal").value = (valorAtual + precoTotal).toFixed(2);
+
+            // Limpar seleção para adicionar novo produto
+            document.getElementById("produto").selectedIndex = 0;
+            document.getElementById("quantidade").value = "";
         } else {
             alert("Quantidade inválida!");
         }
     } else {
-        alert("Produto não encontrado!");
+        alert("Selecione um produto válido!");
     }
 });
