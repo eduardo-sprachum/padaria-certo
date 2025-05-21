@@ -93,9 +93,11 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
 });
 
 document.getElementById("adicionarProduto").addEventListener("click", function () {
-    // Código que adiciona o produto à lista...
+    // Código que adiciona o produto...
 
-    // Depois de adicionar, rolar para o final suavemente
-    let lista = document.getElementById("produtosLista");
-    lista.scrollTop = lista.scrollHeight;
+    // Depois de adicionar, rolar para o final
+    setTimeout(() => {
+        let lista = document.getElementById("produtosLista");
+        lista.scrollTo({ top: lista.scrollHeight, behavior: "smooth" });
+    }, 100); // Pequeno delay para garantir atualização da DOM
 });
