@@ -38,6 +38,10 @@ html {
     flex-direction: column;
     gap: 5px;
     padding-top: 20px;
+    height: 100vh; /* NOVO */
+    position: fixed; /* Mantém fixo na lateral */
+    top: 0;
+    left: 0;
 }
 
 .sidebar a,
