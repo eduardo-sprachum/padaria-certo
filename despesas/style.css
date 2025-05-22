@@ -118,9 +118,11 @@ header p {
     display: flex;
     gap: 40px;
     margin-top: 30px;
-    max-width: 900px; /* controle max da largura da área */
+    max-width: 1000px;
     width: 100%;
+    align-items: flex-start; /* para alinhar topo dos dois lados */
 }
+
 
 .expense-form {
     display: flex;
@@ -163,7 +165,7 @@ header p {
 
 .expense-list {
     flex: 1;
-    max-width: 480px; /* um pouco maior para ocupar mais espaço */
+    max-width: 700px;  /* largura maior para o retângulo */
     margin-top: 0;
     display: flex;
     flex-direction: column;
@@ -173,21 +175,20 @@ header p {
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 1.3em;
-    width: 100%;  /* ocupar toda largura do container */
-    /* você pode adicionar padding se quiser, ex: */
+    width: 100%;
     padding-left: 4px;
 }
 
 .expense-list ul {
     list-style: none;
-    padding: 0;
+    padding: 0 10px;
     margin: 0;
     border: 1px solid #ccc;
     border-radius: 4px;
-    height: 300px;
+    height: 150px;        /* altura menor para ser achatado */
     overflow-y: auto;
     background-color: #fff;
-    width: 100%; /* garantir largura total */
+    width: 100%;
 }
 
 .expense-list li {
