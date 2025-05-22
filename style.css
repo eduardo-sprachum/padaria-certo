@@ -28,7 +28,22 @@ body, html {
 }
 
 .menu-item {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    flex: 1;
+}
+
+.menu-link:hover {
+    text-decoration: underline;
 }
 
 .icon {
