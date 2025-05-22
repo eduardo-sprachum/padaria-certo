@@ -114,6 +114,49 @@ header p {
     margin-bottom: 20px;
 }
 
+.expense-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 10px;
+}
+
+.expense-form input {
+    padding: 8px;
+    font-size: 1em;
+}
+
+.expense-form button {
+    padding: 10px;
+    background-color: #1d2671;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+.expense-form button:hover {
+    background-color: #16205a;
+}
+
+.expense-list {
+    margin-top: 30px;
+}
+
+.expense-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.expense-list li {
+    background-color: #f0f0f0;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
 /* ======= Footer ======= */
 footer {
     width: 100%;
