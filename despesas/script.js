@@ -1,18 +1,33 @@
-    function adicionarDespesa() {
-        const desc = document.getElementById('desc').value.trim();
-        const valor = parseFloat(document.getElementById('valor').value);
-
-        if (!desc || isNaN(valor)) {
-            alert("Preencha a descrição e o valor corretamente.");
-            return;
+    function toggleSubMenu() {
+            const subMenu = document.getElementById('sub-menu');
+            subMenu.classList.toggle('active');
         }
 
-        const lista = document.getElementById('lista-despesas');
-        const item = document.createElement('li');
-        item.textContent = `${desc} - R$ ${valor.toFixed(2)}`;
-        lista.appendChild(item);
+        // Função para adicionar despesa
+        function adicionarDespesa() {
+            const descInput = document.getElementById('desc');
+            const valorInput = document.getElementById('valor');
 
-        // Limpar campos
-        document.getElementById('desc').value = '';
-        document.getElementById('valor').value = '';
-    }
+            const desc = descInput.value.trim();
+            const valor = parseFloat(valorInput.value);
+
+            if (!desc || isNaN(valor)) {
+                alert("Preencha a descrição e o valor corretamente.");
+                return;
+            }
+
+            const lista = document.getElementById('lista-despesas');
+            const item = document.createElement('li');
+            item.textContent = `${desc} - R$ ${valor.toFixed(2)}`;
+            lista.appendChild(item);
+
+            // Limpar campos
+            descInput.value = '';
+            valorInput.value = '';
+
+            // Focar no campo descrição para facilitar nova entrada
+            descInput.focus();
+        }
+
+        // Adiciona listener ao botão para evitar usar onclick inline
+        document.getElementById('btnAdicionar').addEventListener('click', adicionarDespesa);
