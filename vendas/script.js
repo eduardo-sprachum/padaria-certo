@@ -12,6 +12,7 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
         <select id="${idProduto}" name="produto[]" required>
             <option value="nenhum" selected disabled>Selecione um produto</option>
             <option value="biscoito">Biscoito de Polvilho</option>
+            <option value="bolacha">Bolacha</option>
             <option value="bolo-cenoura">Bolo de Cenoura</option>
             <option value="bolo-chocolate">Bolo de Chocolate</option>
             <option value="bolo-fuba">Bolo de Fubá</option>
@@ -48,11 +49,12 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
 });
 
 const precosProdutos = {
-    "BISCOITO": 5.00,
-    "BOLO CENOURA": 12.00,
-    "BOLO CHOCOLATE": 15.00,
-    "BOLO FUBÁ": 10.00,
-    "BOLO LARANJA": 13.00,
+    "BISCOITO DE POLVILHO": 5.00,
+    "BOLACHA": 4.00,
+    "BOLO DE CENOURA": 12.00,
+    "BOLO DE CHOCOLATE": 15.00,
+    "BOLO DE FUBÁ": 10.00,
+    "BOLO DE LARANJA": 13.00,
     "BOLO MILHO": 11.00,
     "COXINHA": 7.00,
     "CROISSANT": 9.00,
@@ -60,18 +62,18 @@ const precosProdutos = {
     "DONUTS": 8.00,
     "EMPADINHA": 6.00,
     "ESFIHA": 10.00,
-    "PÃO FORMA": 8.00,
+    "PÃO DE FORMA": 8.00,
     "PÃO FRANCÊS": 3.00,
     "PASTEL": 6.00,
     "ROSQUINHA": 4.00,
     "ROSCA POLVILHO": 5.50,
     "TORTA DOCE": 20.00,
     "TORTA SALGADA": 18.00,
-    "CAFE": 5.00,
-    "CAFE-LEITE": 7.00,
+    "CAFÉ": 5.00,
+    "CAFÉ COM LEITE": 7.00,
     "CAPUCCINO": 10.00,
-    "CHA": 4.00,
-    "CHOCOLATE-QUENTE": 8.00,
+    "CHÁ": 4.00,
+    "CHOCOLATE QUENTE": 8.00,
     "SUCO": 10.00,
     "REFRIGERANTE": 10.00
 };
