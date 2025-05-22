@@ -163,7 +163,7 @@ header p {
 
 .expense-list {
     flex: 1;
-    max-width: 400px;
+    max-width: 480px; /* um pouco maior para ocupar mais espaço */
     margin-top: 0;
     display: flex;
     flex-direction: column;
@@ -171,6 +171,11 @@ header p {
 
 .expense-list h3 {
     margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.3em;
+    width: 100%;  /* ocupar toda largura do container */
+    /* você pode adicionar padding se quiser, ex: */
+    padding-left: 4px;
 }
 
 .expense-list ul {
@@ -182,6 +187,7 @@ header p {
     height: 300px;
     overflow-y: auto;
     background-color: #fff;
+    width: 100%; /* garantir largura total */
 }
 
 .expense-list li {
