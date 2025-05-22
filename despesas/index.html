@@ -9,12 +9,12 @@
 <body>
   <div class="sidebar">
     <img src="img-despesas/logo3.png" alt="New Code Systems Logo" class="logo" />
-    <div class="menu-item">
+    <div class="menu-item" onclick="toggleSubMenu()">
       <div class="icon">
         <img src="img-despesas/inicio.svg" alt="Ícone de Início" class="home-icon" />
       </div>
       <span>Início</span>
-      <button onclick="toggleSubMenu()" class="toggle-btn">▾</button>
+      <button class="toggle-btn">▾</button>
     </div>
     <div id="sub-menu" class="sub-menu">
       <a href="vendas/index.html">Vendas</a>
@@ -22,19 +22,19 @@
       <a href="estoque/index.html">Estoque</a>
       <a href="relatorios/index.html">Relatórios</a>
     </div>
-    <a href="#">
+    <a href="#" class="menu-link">
       <div class="icon">
         <img src="img-despesas/perfil.svg" alt="Ícone de Perfil" class="profile-icon" />
       </div>
       Perfil
     </a>
-    <a href="#">
+    <a href="#" class="menu-link">
       <div class="icon">
         <img src="img-despesas/whatsapp.png" alt="Ícone do WhatsApp" class="ai-icon" />
       </div>
       IA
     </a>
-    <a href="#">
+    <a href="#" class="menu-link">
       <div class="icon">
         <img src="img-despesas/ajuda.svg" alt="Ícone de Ajuda" class="help-icon" />
       </div>

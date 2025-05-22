@@ -1,4 +1,4 @@
-/* ======= Global Styles ======= */
+/* ======= Estilos Globais ======= */
 body, html {
     margin: 0;
     padding: 0;
@@ -8,204 +8,104 @@ body, html {
     overflow: hidden;
 }
 
-/* ======= Sidebar ======= */
+/* ======= Barra Lateral ======= */
 .sidebar {
     width: 250px;
     background-color: #1d2671;
     color: white;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    padding-top: 20px;
+    gap: 10px;
+    padding: 20px 0;
 }
 
-.sidebar a, .menu-item {
+.sidebar .menu-item, .menu-link {
     color: white;
     text-decoration: none;
     padding: 15px 20px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .menu-item {
-    position: relative;
+    justify-content: space-between;
 }
 
-.icon {
-    width: 24px;
-    height: 24px;
-    background-color: transparent;
-    margin-right: 10px;
-}
-
-.profile-icon {
+.icon img {
     width: 24px;
     height: 24px;
     margin-right: 10px;
-}
-
-.ai-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.help-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.home-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-/* Removendo o fundo branco da seta */
-.toggle-btn {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 1.2em;
-    cursor: pointer;
 }
 
 .sub-menu {
     display: none;
     flex-direction: column;
-    background-color: #1d2671;
-    margin-left: 20px;
+    padding-left: 20px;
 }
 
 .sub-menu.active {
     display: flex;
 }
 
-/* ======= Main Content ======= */
+/* ======= Conteúdo Principal ======= */
 .main-content {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     padding: 20px;
 }
 
-header {
-    text-align: left;
-    margin-top: 0;
-    margin-left: 10px;
-}
-
-header h1 {
+.header-top h1 {
     color: #1d2671;
     font-size: 2.5em;
-    margin-bottom: 10px;
 }
 
-header h2 {
+.header-top h2 {
     color: #2c3e50;
     font-size: 1.8em;
 }
 
-header p {
-    color: #7f8c8d;
-    margin-bottom: 20px;
-}
-
-/* --- Container para form + lista lado a lado --- */
+/* ======= Formulário de Despesas ======= */
 .expense-container {
     display: flex;
     gap: 40px;
     margin-top: 30px;
     max-width: 1000px;
-    width: 100%;
-    align-items: flex-start; /* para alinhar topo dos dois lados */
 }
-
 
 .expense-form {
     display: flex;
     flex-direction: column;
     max-width: 400px;
-    width: 100%; /* ocupar toda largura disponível no container */
     gap: 15px;
-    margin-top: 0;
 }
 
-.expense-form label {
-    font-weight: bold;
-    display: block;
-    width: 100%;
-    margin-bottom: 6px;
+.expense-form input, .expense-form button {
+    padding: 10px;
     font-size: 1.1em;
 }
 
-.expense-form input {
-    padding: 8px;
-    font-size: 1em;
-    width: 100%;
-    box-sizing: border-box; /* para não estourar a largura */
-}
-
 .expense-form button {
-    padding: 12px;
     background-color: #1d2671;
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 1.1em;
-    border-radius: 4px;
-    width: 100%;
 }
 
 .expense-form button:hover {
     background-color: #16205a;
 }
 
-.expense-list {
-    flex: 1;
-    max-width: 700px;  /* largura maior para o retângulo */
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.expense-list h3 {
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 1.3em;
-    width: 100%;
-    padding-left: 4px;
-}
-
+/* ======= Lista de Despesas ======= */
 .expense-list ul {
     list-style: none;
-    padding: 0 10px;
-    margin: 0;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    height: 150px;        /* altura menor para ser achatado */
-    overflow-y: auto;
     background-color: #fff;
-    width: 100%;
 }
 
 .expense-list li {
     background-color: #f0f0f0;
-    margin-bottom: 8px;
     padding: 10px;
     border-radius: 4px;
-}
-
-/* ======= Footer ======= */
-footer {
-    width: 100%;
-    background-color: #1d2671;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
 }
