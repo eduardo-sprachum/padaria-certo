@@ -119,28 +119,31 @@ header p {
     display: flex;
     align-items: center;
     background-color: #f1f1f1;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 12px;
-    gap: 20px;
+    padding: 30px; /* aumentado */
+    margin: 30px 0; /* aumentado */
+    border-radius: 16px; /* levemente aumentado */
+    gap: 30px; /* aumentado */
+    font-size: 1.2em; /* aumenta o tamanho da fonte de todo o bloco */
 }
 
 .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 140px;  /* aumentado */
+    height: 140px; /* aumentado */
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #1d2671;
+    border: 4px solid #1d2671; /* levemente aumentado */
 }
 
 .user-info h2 {
     margin: 0;
     color: #1d2671;
+    font-size: 2em; /* aumentado */
 }
 
 .user-info p {
-    margin: 5px 0;
+    margin: 8px 0; /* levemente aumentado */
     color: #333;
+    font-size: 1.2em; /* aumentado */
 }
 
 /* ======= Footer ======= */
