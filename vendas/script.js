@@ -38,7 +38,6 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
             <option value="chocolate-quente">Chocolate quente</option>
             <option value="suco">suco</option>
             <option value="refrigerante">Refrigerante</option>
-            
         </select>
 
         <label for="${idQuantidade}">Quantidade:</label>

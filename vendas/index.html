@@ -84,13 +84,19 @@
                 <option value="CHOCOLATE QUENTE">Chocolate quente</option>
                 <option value="SUCO">Suco</option>
                 <option value="REFRIGERANTE">Refrigerante</option>
-
-
-
             </select>
 
             <label for="quantidade">Quantidade:</label>
             <input type="number" id="quantidade" name="quantidade" required>
+
+            <form id="formVenda">
+            <label for="produto">Forma de Pagamento</label>
+            <select id="pagamento" name="pagamento" required>
+                <option value="nenhum" selected disabled>Selecione uma forma de pagamento</option>
+                <option value="DINHEIRO">Dinheiro</option>
+                <option value="CARTÃO">Cartão</option>
+                <option value="FIADO">Fiado</option>
+            </select>
 
             <button type="button" id="adicionarProduto">Adicionar Produto</button>
 
