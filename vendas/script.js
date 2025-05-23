@@ -11,33 +11,33 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
         <label for="${idProduto}">Produto:</label>
         <select id="${idProduto}" name="produto[]" required>
             <option value="nenhum" selected disabled>Selecione um produto</option>
-            <option value="biscoito">Biscoito de Polvilho</option>
-            <option value="bolacha">Bolacha</option>
-            <option value="bolo-cenoura">Bolo de Cenoura</option>
-            <option value="bolo-chocolate">Bolo de Chocolate</option>
-            <option value="bolo-fuba">Bolo de Fubá</option>
-            <option value="bolo-laranja">Bolo de Laranja</option>
-            <option value="bolo-milho">Bolo de Milho</option>
-            <option value="coxinha">Coxinha</option>
-            <option value="croissant">Croissant</option>
-            <option value="cuca">Cuca</option>
-            <option value="donuts">Donuts</option>
-            <option value="empadinha">Empadinha</option>
-            <option value="esfiha">Esfiha</option>
-            <option value="pao-forma">Pão de Forma</option>
-            <option value="pao-frances">Pão Francês</option>
-            <option value="pastel">Pastel</option>
-            <option value="rosquinha">Rosquinha</option>
-            <option value="rosca-polvilho">Rosca de Polvilho</option>
-            <option value="torta-doce">Torta Doce</option>
-            <option value="torta-salgada">Torta Salgada</option>
-            <option value="cafe">Café preto</option>
-            <option value="cafe-leite">Café com leite</option>
-            <option value="capuccino">Capuccino</option>
-            <option value="cha">Chá</option>
-            <option value="chocolate-quente">Chocolate quente</option>
-            <option value="suco">suco</option>
-            <option value="refrigerante">Refrigerante</option>
+            <option value="biscoito">Biscoito de Polvilho-R$ 5.00</option>
+            <option value="bolacha">Bolacha-R$ 4.00</option>
+            <option value="bolo-cenoura">Bolo de Cenoura-R$ 12.00</option>
+            <option value="bolo-chocolate">Bolo de Chocolate-R$ 15.00</option>
+            <option value="bolo-fuba">Bolo de Fubá-R$ 10.00</option>
+            <option value="bolo-laranja">Bolo de Laranja-R$ 13.00</option>
+            <option value="bolo-milho">Bolo de Milho R$-11.00</option>
+            <option value="coxinha">Coxinha-R$ 7.00</option>
+            <option value="croissant">Croissant-R$ 9.00</option>
+            <option value="cuca">Cuca-R$ 14.00</option>
+            <option value="donuts">Donuts-R$ 8.00</option>
+            <option value="empadinha">Empadinha-R$ 6.00</option>
+            <option value="esfiha">Esfiha-R$ 10.00</option>
+            <option value="pao-forma">Pão de Forma-R$ 8.00</option>
+            <option value="pao-frances">Pão Francês-R$ 2.00</option>
+            <option value="pastel">Pastel-R$ 6.00</option>
+            <option value="rosquinha">Rosquinha-R$ 4.00</option>
+            <option value="rosca-polvilho">Rosca de PolvilhO-R$ 5.00</option>
+            <option value="torta-doce">Torta Doce-R$ 20.00</option>
+            <option value="torta-salgada">Torta Salgada-R$ 18.00</option>
+            <option value="cafe">Café preto-R$ 5.00</option>
+            <option value="cafe-leite">Café com leite-R$ 8.00</option>
+            <option value="capuccino">Capuccino-R$ 10.00</option>
+            <option value="cha">Chá-R$ 4.00</option>
+            <option value="chocolate-quente">Chocolate quente-R$ 8.00</option>
+            <option value="suco">Suco-R$ 10.00</option>
+            <option value="refrigerante">Refrigerante-R$ 10.00</option>
         </select>
 
         <label for="${idQuantidade}">Quantidade:</label>
@@ -62,7 +62,7 @@ const precosProdutos = {
     "EMPADINHA": 6.00,
     "ESFIHA": 10.00,
     "PÃO DE FORMA": 8.00,
-    "PÃO FRANCÊS": 3.00,
+    "PÃO FRANCÊS": 2.00,
     "PASTEL": 6.00,
     "ROSQUINHA": 4.00,
     "ROSCA POLVILHO": 5.00,
