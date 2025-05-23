@@ -27,23 +27,23 @@ body, html {
     align-items: left;
 }
 
-.menu-item {
-    display: flex;
-    align-items: left;
-    justify-content: space-between;
-    padding: 15px 20px;
-}
-
 .menu-link {
     display: flex;
-    align-items: left;
+    align-items: center; /* corrigido de 'left' para 'center' */
     color: white;
     text-decoration: none;
     flex: 1;
 }
 
 .menu-link:hover {
-    text-decoration: underline;
+    text-decoration: none; /* remove sublinhado ao passar o mouse */
+}
+
+.menu-item {
+    display: flex;
+    align-items: center; /* corrigido de 'left' para 'center' */
+    justify-content: space-between;
+    padding: 15px 20px;
 }
 
 .icon {
