@@ -90,7 +90,6 @@ body, html {
     display: none;
     flex-direction: column;
     background-color: #1d2671;
-    margin-left: 20px;
 }
 
 .sub-menu.active {
