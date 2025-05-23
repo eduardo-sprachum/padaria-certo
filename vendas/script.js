@@ -65,7 +65,7 @@ const precosProdutos = {
     "PÃO FRANCÊS": 3.00,
     "PASTEL": 6.00,
     "ROSQUINHA": 4.00,
-    "ROSCA POLVILHO": 5.50,
+    "ROSCA POLVILHO": 5.00,
     "TORTA DOCE": 20.00,
     "TORTA SALGADA": 18.00,
     "CAFÉ": 5.00,
