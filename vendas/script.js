@@ -28,14 +28,14 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
             <option value="pao-frances">Pão Francês-R$ 2.00</option>
             <option value="pastel">Pastel-R$ 6.00</option>
             <option value="rosquinha">Rosquinha-R$ 4.00</option>
-            <option value="rosca-polvilho">Rosca de PolvilhO-R$ 5.00</option>
+            <option value="rosca-polvilho">Rosca de Polvilho-R$ 5.00</option>
             <option value="torta-doce">Torta Doce-R$ 20.00</option>
             <option value="torta-salgada">Torta Salgada-R$ 18.00</option>
             <option value="cafe">Café preto-R$ 5.00</option>
             <option value="cafe-leite">Café com leite-R$ 8.00</option>
             <option value="capuccino">Capuccino-R$ 10.00</option>
             <option value="cha">Chá-R$ 4.00</option>
-            <option value="chocolate-quente">Chocolate quente-R$ 8.00</option>
+            <option value="chocolate-quente">Chocolate Quente-R$ 8.00</option>
             <option value="suco">Suco-R$ 10.00</option>
             <option value="refrigerante">Refrigerante-R$ 10.00</option>
         </select>
