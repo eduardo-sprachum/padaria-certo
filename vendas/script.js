@@ -116,42 +116,39 @@ document.getElementById("adicionarProduto").addEventListener("click", function (
 });
 
 // Submissão do formulário
-document.getElementById("formVenda").addEventListener("submit", function (e) {
-    e.preventDefault();
+document.getElementById("formVenda").addEventListener("submit", async function (e) {
+    e.preventDefault(); // Impede o recarregamento da página
 
-    let valorTotal = document.getElementById("valorTotal").value;
+    let produtoSelecionado = document.getElementById("produto").value;
+    let quantidade = parseInt(document.getElementById("quantidade").value);
+    let pagamento = document.getElementById("pagamento").value;
+    let valorTotal = parseFloat(document.getElementById("valorTotal").value);
 
-    if (listaProdutos.length === 0) {
-        alert("Adicione ao menos um produto antes de lançar a venda.");
+    if (!produtoSelecionado || isNaN(quantidade) || quantidade <= 0 || isNaN(valorTotal) || pagamento === "nenhum") {
+        alert("Preencha todos os campos corretamente!");
         return;
     }
 
-    fetch("salvar_venda.php", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: `produtos[]=${listaProdutos.join("&produtos[]=")}&quantidades[]=${listaQuantidades.join("&quantidades[]=")}&valorTotal=${valorTotal}`
-    })
-    .then(res => res.json())
-    .then(data => {
-        if (data.success) {
-            alert("Venda registrada com sucesso!");
+    try {
+        // Salvar venda no Firebase
+        await addDoc(collection(db, "vendas"), {
+            produto: produtoSelecionado,
+            quantidade: quantidade,
+            pagamento: pagamento,
+            valorTotal: valorTotal,
+            data_venda: new Date()
+        });
 
-            // Limpa a interface
-            document.getElementById("produtosLista").innerHTML = "";
-            document.getElementById("valorTotal").value = "";
-            listaProdutos = [];
-            listaQuantidades = [];
+        alert("Venda registrada com sucesso!");
 
-            // Remove botão de submit
-            document.querySelector(".submit-container").remove();
-        } else {
-            alert("Erro ao salvar venda.");
-        }
-    })
-    .catch(err => {
-        console.error("Erro:", err);
-        alert("Erro ao enviar venda.");
-    });
+        // Limpa os campos do formulário
+        document.getElementById("produto").selectedIndex = 0;
+        document.getElementById("quantidade").value = "";
+        document.getElementById("valorTotal").value = "";
+        document.getElementById("produtosLista").innerHTML = "";
+
+    } catch (error) {
+        console.error("Erro ao salvar venda:", error);
+        alert("Erro ao registrar a venda.");
+    }
 });
