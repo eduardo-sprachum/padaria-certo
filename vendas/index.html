@@ -5,6 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Code Systems - Padaria Nova Esperança</title>
     <link rel="stylesheet" href="./style.css">
+    <script type="module">
+  // Importando Firebase
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js";
+
+  // Configuração do Firebase
+  const firebaseConfig = {
+    apiKey: "SUA_API_KEY",
+    authDomain: "SEU_PROJETO.firebaseapp.com",
+    projectId: "SEU_PROJETO",
+    storageBucket: "SEU_PROJETO.appspot.com",
+    messagingSenderId: "SEU_SENDER_ID",
+    appId: "SEU_APP_ID"
+  };
+
+  // Inicializando Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Função para salvar vendas
+  async function salvarVenda(produto, quantidade, pagamento, valorTotal) {
+    try {
+      const docRef = await addDoc(collection(db, "vendas"), {
+        produto,
+        quantidade,
+        pagamento,
+        valorTotal,
+        data_venda: new Date()
+      });
+      console.log("Venda registrada, ID:", docRef.id);
+    } catch (e) {
+      console.error("Erro ao registrar venda:", e);
+    }
+  }
+
+  // Capturar dados do formulário e enviar ao Firebase
+  document.getElementById("formVenda").addEventListener("submit", (event) => {
+    event.preventDefault();
+    
+    const produto = document.getElementById("produto").value;
+    const quantidade = document.getElementById("quantidade").value;
+    const pagamento = document.getElementById("pagamento").value;
+    const valorTotal = document.getElementById("valorTotal").value;
+
+    salvarVenda(produto, quantidade, pagamento, valorTotal);
+  });
+</script>
 </head>
 <body>
     <div class="sidebar">
@@ -125,5 +172,18 @@
     </script>
 
     <script src="script.js"></script>
+<script type="module">
+  import { getDocs, collection } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js";
+
+  async function carregarVendas() {
+    const querySnapshot = await getDocs(collection(db, "vendas"));
+    querySnapshot.forEach((doc) => {
+      console.log("Venda:", doc.data());
+    });
+  }
+
+  carregarVendas();
+</script>
+
 </body>
 </html>
