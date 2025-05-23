@@ -24,12 +24,12 @@ body, html {
     text-decoration: none;
     padding: 15px 20px;
     display: flex;
-    align-items: center;
+    align-items: left;
 }
 
 .menu-item {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
     padding: 15px 20px;
 }
